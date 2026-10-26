@@ -1,0 +1,103 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Utility animation classes */
+.animate-fadeInUp {
+  animation: fadeInUp 0.7s ease forwards;
+}
+.animate-fadeIn {
+  animation: fadeIn 0.7s ease forwards;
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float-delayed 5s ease-in-out infinite 1s;
+}
+
+/* Scroll-triggered animations */
+[data-animate] {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(24px);
+}
+[data-animate].visible {
+  opacity: 1;
+  transform: none;
+}
+[data-animate="left"] {
+  transform: translateX(-32px);
+}
+[data-animate="left"].visible {
+  transform: none;
+}
+[data-animate="right"] {
+  transform: translateX(32px);
+}
+[data-animate="right"].visible {
+  transform: none;
+}
+[data-animate="scale"] {
+  transform: scale(0.95);
+}
+[data-animate="scale"].visible {
+  transform: scale(1);
+}

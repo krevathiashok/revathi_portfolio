@@ -1,0 +1,285 @@
+/* Simplistic WhatsApp & Direct Channels Layout */
+.contact {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__simple-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .contact__simple-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* =========================================================
+   WhatsApp Connect Box
+   ========================================================= */
+.contact__wa-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact__wa-box:hover {
+  transform: translateY(-4px);
+  border-color: #25d366;
+  box-shadow: 0 16px 36px -4px rgba(37, 211, 102, 0.16), var(--shadow);
+}
+
+.contact__wa-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.contact__wa-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #15803d;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+[data-theme="dark"] .contact__wa-tag {
+  color: #4ade80;
+}
+
+.contact__status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.contact__pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.contact__wa-heading {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--off-white);
+  line-height: 1.25;
+}
+
+.contact__wa-sub {
+  font-size: 0.92rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+.contact__wa-button {
+  background: #25d366;
+  color: #ffffff !important;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.32);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  width: fit-content;
+}
+
+.contact__wa-button:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.42);
+}
+
+.contact__wa-footer-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  color: var(--gray-text);
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+.contact__sparkle {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   Channels Box
+   ========================================================= */
+.contact__channels-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.contact__channels-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--off-white);
+}
+
+.contact__channels-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contact__channel-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.85rem 1rem;
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.contact__channel-row:not(.contact__channel-row--disabled):hover {
+  transform: translateX(3px);
+  border-color: var(--blue);
+}
+
+.contact__channel-row--disabled {
+  opacity: 0.65;
+}
+
+.contact__channel-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  flex-shrink: 0;
+}
+
+.contact__channel-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2px;
+}
+
+.contact__channel-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.contact__channel-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-mid);
+}
+
+.contact__channel-desc {
+  font-size: 0.72rem;
+  color: var(--gray-mid);
+}
+
+@media (max-width: 540px) {
+  .contact__channel-desc {
+    display: none;
+  }
+}
+
+.contact__channel-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--off-white);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+a.contact__channel-link:hover {
+  color: var(--blue);
+}
+
+.contact__channel-link--muted {
+  color: var(--gray-mid);
+  font-style: italic;
+  font-size: 0.84rem;
+}
+
+.contact__arrow-icon {
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contact__channel-row:hover .contact__arrow-icon {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+/* Status Banner */
+.contact__status-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.75rem 1rem;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.22);
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  color: var(--off-white);
+  font-weight: 500;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.6;
+  }
+}
