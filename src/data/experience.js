@@ -2,7 +2,7 @@ export const experiences = [
   {
     id: 1,
     role: "Design Head / UI & UX Designer (AI-based SaaS Product)",
-    company: "Iniramsquare Private Limited – Nagercoil",
+    company: "Iniramsquare Private Limited",
     period: "Jan 2026 – August 2026",
     type: "Leadership · Full-time",
     description:
@@ -49,25 +49,25 @@ export const experiences = [
       "Interactive Prototyping",
     ],
   },
-  {
-    id: 3,
-    role: "Creative AI Designer",
-    company: "Inkpen India",
-    period: "Jul 2020 – Dec 2022",
-    type: "Creative AI",
-    description:
-      "Pioneered AI-assisted creative workflows for character design and themed commercial storytelling visuals.",
-    bullets: [
-      "Generated custom kids’ character visuals using Midjourney",
-      "Delivered 100+ themed high-resolution AI images and storytelling assets",
-    ],
-    highlights: [
-      "Midjourney Character Visuals",
-      "100+ Themed AI Images",
-      "Generative Storytelling",
-      "Prompt Engineering",
-    ],
-  },
+  // {
+  //   id: 3,
+  //   role: "Creative AI Designer",
+  //   company: "Inkpen India",
+  //   period: "Jul 2020 – Dec 2022",
+  //   type: "Creative AI",
+  //   description:
+  //     "Pioneered AI-assisted creative workflows for character design and themed commercial storytelling visuals.",
+  //   bullets: [
+  //     "Generated custom kids’ character visuals using Midjourney",
+  //     "Delivered 100+ themed high-resolution AI images and storytelling assets",
+  //   ],
+  //   highlights: [
+  //     "Midjourney Character Visuals",
+  //     "100+ Themed AI Images",
+  //     "Generative Storytelling",
+  //     "Prompt Engineering",
+  //   ],
+  // },
   {
     id: 4,
     role: "Graphics & UI/UX Designer",
